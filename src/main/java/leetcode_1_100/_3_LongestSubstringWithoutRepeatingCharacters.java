@@ -5,6 +5,10 @@ import java.util.Set;
 
 public class _3_LongestSubstringWithoutRepeatingCharacters {
 
+    public static void main(String[] args) {
+        System.out.println(new _3_LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(" "));
+    }
+
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
         int left = 0;
@@ -29,10 +33,6 @@ public class _3_LongestSubstringWithoutRepeatingCharacters {
         }
 
         return maxLength;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _3_LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(" "));
     }
 
 }

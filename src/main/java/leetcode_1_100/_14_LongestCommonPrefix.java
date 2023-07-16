@@ -17,6 +17,11 @@ public class _14_LongestCommonPrefix {
         return first.substring(0, i);
     }*/
 
+    public static void main(String[] args) {
+        System.out.println(new _14_LongestCommonPrefix().longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
+        System.out.println(new _14_LongestCommonPrefix().longestCommonPrefix(new String[]{""}));
+    }
+
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";
@@ -28,10 +33,5 @@ public class _14_LongestCommonPrefix {
             }
         }
         return pre;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _14_LongestCommonPrefix().longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
-        System.out.println(new _14_LongestCommonPrefix().longestCommonPrefix(new String[]{""}));
     }
 }

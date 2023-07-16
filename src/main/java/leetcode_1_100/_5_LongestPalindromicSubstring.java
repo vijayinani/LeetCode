@@ -21,6 +21,10 @@ public class _5_LongestPalindromicSubstring {
     int maxLength = 0;
     int startIndex = 0;
 
+    public static void main(String[] args) {
+        System.out.println(new _5_LongestPalindromicSubstring().longestPalindrome("ababd"));
+    }
+
     public String longestPalindrome(String s) {
         for (int i = 0; i < s.length(); i++) {
             check(s, i, i);
@@ -39,9 +43,5 @@ public class _5_LongestPalindromicSubstring {
             startIndex = begin + 1;
             maxLength = end - begin - 1;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _5_LongestPalindromicSubstring().longestPalindrome("ababd"));
     }
 }

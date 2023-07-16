@@ -1,8 +1,15 @@
 package leetcode_1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class _17_LetterCombinationsOfAPhoneNumber {
+    public static void main(String[] args) {
+        System.out.println(new _17_LetterCombinationsOfAPhoneNumber().letterCombinations("23"));
+    }
+
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
         if (digits.equals("")) {
@@ -34,9 +41,5 @@ public class _17_LetterCombinationsOfAPhoneNumber {
             dfs(digits, i + 1, stringBuilder, result, numToChar);
             stringBuilder.deleteCharAt(stringBuilder.length() - 1);
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _17_LetterCombinationsOfAPhoneNumber().letterCombinations("23"));
     }
 }

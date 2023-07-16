@@ -2,6 +2,10 @@ package leetcode_1_100;
 
 public class _6_ZigzagConversion {
 
+    public static void main(String[] args) {
+        System.out.println(new _6_ZigzagConversion().convert("PAYPALISHIRING", 3));
+    }
+
     public String convert(String s, int numRows) {
 
         int n = s.length();
@@ -26,9 +30,5 @@ public class _6_ZigzagConversion {
             result.append(sbCurr);
         }
         return result.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _6_ZigzagConversion().convert("PAYPALISHIRING", 3));
     }
 }

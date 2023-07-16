@@ -1,6 +1,12 @@
 package leetcode_1_100;
 
 public class _12_IntegerToRoman {
+    public static void main(String[] args) {
+        System.out.println(new _12_IntegerToRoman().intToRoman(3));
+        System.out.println(new _12_IntegerToRoman().intToRoman(58));
+        System.out.println(new _12_IntegerToRoman().intToRoman(1994));
+    }
+
     public String intToRoman(int num) {
         StringBuilder result = new StringBuilder();
         int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
@@ -14,11 +20,5 @@ public class _12_IntegerToRoman {
             i++;
         }
         return result.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _12_IntegerToRoman().intToRoman(3));
-        System.out.println(new _12_IntegerToRoman().intToRoman(58));
-        System.out.println(new _12_IntegerToRoman().intToRoman(1994));
     }
 }

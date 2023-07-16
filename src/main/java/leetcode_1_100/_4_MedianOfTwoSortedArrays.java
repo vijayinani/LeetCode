@@ -1,6 +1,10 @@
 package leetcode_1_100;
 
 public class _4_MedianOfTwoSortedArrays {
+    public static void main(String[] args) {
+        System.out.println(new _4_MedianOfTwoSortedArrays().findMedianSortedArrays(new int[]{1, 3}, new int[]{2, 4, 9, 11}));
+    }
+
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         boolean even = (nums1.length + nums2.length) % 2 == 0;
         int minIndex = 0;
@@ -30,9 +34,5 @@ public class _4_MedianOfTwoSortedArrays {
             minIndex++;
         }
         return even ? (preVal + currVal) / 2.0 : currVal;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _4_MedianOfTwoSortedArrays().findMedianSortedArrays(new int[]{1, 3}, new int[]{2, 4, 9, 11}));
     }
 }

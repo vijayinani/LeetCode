@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _13RomanToInteger {
+    public static void main(String[] args) {
+        System.out.println(new _13RomanToInteger().romanToInt("MCMXCIV"));
+    }
+
     public int romanToInt(String s) {
 
         int result = 0;
@@ -29,9 +33,5 @@ public class _13RomanToInteger {
         }
         result += romanToInteger.get(s.charAt(n - 1));
         return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _13RomanToInteger().romanToInt("MCMXCIV"));
     }
 }

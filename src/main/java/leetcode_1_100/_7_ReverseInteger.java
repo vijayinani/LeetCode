@@ -1,6 +1,10 @@
 package leetcode_1_100;
 
 public class _7_ReverseInteger {
+    public static void main(String[] args) {
+        System.out.println(new _7_ReverseInteger().reverse(123));
+    }
+
     public int reverse(int x) {
         int result = 0;
         int newResult = 0;
@@ -14,9 +18,5 @@ public class _7_ReverseInteger {
             x = x / 10;
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _7_ReverseInteger().reverse(123));
     }
 }

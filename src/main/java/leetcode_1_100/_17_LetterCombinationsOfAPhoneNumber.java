@@ -5,6 +5,9 @@ import java.util.*;
 public class _17_LetterCombinationsOfAPhoneNumber {
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
+        if (digits.equals("")) {
+            return result;
+        }
         Map<Integer, Character[]> numToChar = new HashMap<>();
         numToChar.put(2, new Character[]{'a', 'b', 'c'});
         numToChar.put(3, new Character[]{'d', 'e', 'f'});
@@ -13,7 +16,7 @@ public class _17_LetterCombinationsOfAPhoneNumber {
         numToChar.put(6, new Character[]{'m', 'n', 'o'});
         numToChar.put(7, new Character[]{'p', 'q', 'r', 's'});
         numToChar.put(8, new Character[]{'t', 'u', 'v'});
-        numToChar.put(29, new Character[]{'w', 'x', 'y', 'z'});
+        numToChar.put(9, new Character[]{'w', 'x', 'y', 'z'});
 
         dfs(digits, 0, new StringBuilder(), result, numToChar);
         return result;

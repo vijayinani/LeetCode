@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_1_100;
 
 public class _6_ZigzagConversion {
 

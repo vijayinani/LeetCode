@@ -1,21 +1,24 @@
 package leetcode_1_100;
 
+import listnode.ListNode;
+
 public class _19_RemoveNthNodeFromEndOfList {
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
+    public static void main(String[] args) {
+        int[] values = new int[]{1, 2, 3, 4, 5};
+        ListNode head = new ListNode(-1);
+        ListNode dummy = head;
+        for (int val : values) {
+            ListNode curr = new ListNode(val);
+            head.next = curr;
+            head = curr;
         }
 
-        ListNode(int val) {
-            this.val = val;
-        }
+        new _19_RemoveNthNodeFromEndOfList().removeNthFromEnd(dummy.next, 2);
 
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
+        while (dummy != null) {
+            System.out.println(dummy.val);
+            dummy = dummy.next;
         }
     }
 
@@ -37,23 +40,5 @@ public class _19_RemoveNthNodeFromEndOfList {
         }
         p2.next = p2.next.next;
         return head;
-    }
-
-    public static void main(String[] args) {
-        int[] values = new int[]{1, 2, 3, 4, 5};
-        ListNode head = new ListNode(-1);
-        ListNode dummy = head;
-        for (int val : values) {
-            ListNode curr = new ListNode(val);
-            head.next = curr;
-            head = curr;
-        }
-
-        new _19_RemoveNthNodeFromEndOfList().removeNthFromEnd(dummy.next, 2);
-
-        while (dummy != null) {
-            System.out.println(dummy.val);
-            dummy = dummy.next;
-        }
     }
 }

@@ -3,6 +3,10 @@ package leetcode_1_100;
 import java.util.Stack;
 
 public class _20_ValidParentheses {
+    public static void main(String[] args) {
+        System.out.println(new _20_ValidParentheses().isValid("{}[]()"));
+    }
+
     public boolean isValid(String s) {
         Stack<Character> parenthesis = new Stack<>();
         if (s.length() % 2 != 0) {
@@ -21,9 +25,5 @@ public class _20_ValidParentheses {
             }
         }
         return parenthesis.isEmpty();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new _20_ValidParentheses().isValid("{}[]()"));
     }
 }

@@ -36,8 +36,8 @@ public class _17_LetterCombinationsOfAPhoneNumber {
         }
 
         Character[] characters = numToChar.get(digits.charAt(i) - '0');
-        for (int j = 0; j < characters.length; j++) {
-            stringBuilder.append(characters[j]);
+        for (Character character : characters) {
+            stringBuilder.append(character);
             dfs(digits, i + 1, stringBuilder, result, numToChar);
             stringBuilder.deleteCharAt(stringBuilder.length() - 1);
         }

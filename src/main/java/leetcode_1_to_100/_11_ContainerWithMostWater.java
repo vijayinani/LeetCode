@@ -1,4 +1,4 @@
-package leetcode_1_100;
+package leetcode_1_to_100;
 
 public class _11_ContainerWithMostWater {
     public static void main(String[] args) {

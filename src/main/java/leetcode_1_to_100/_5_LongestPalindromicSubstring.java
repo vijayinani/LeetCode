@@ -1,4 +1,4 @@
-package leetcode_1_100;
+package leetcode_1_to_100;
 
 public class _5_LongestPalindromicSubstring {
     /*public String longestPalindrome(String s) {

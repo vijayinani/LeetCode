@@ -1,11 +1,11 @@
-package leetcode_1_100;
+package leetcode_1_to_100;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class _13RomanToInteger {
+public class _13_RomanToInteger {
     public static void main(String[] args) {
-        System.out.println(new _13RomanToInteger().romanToInt("MCMXCIV"));
+        System.out.println(new _13_RomanToInteger().romanToInt("MCMXCIV"));
     }
 
     public int romanToInt(String s) {
